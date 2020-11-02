@@ -23,6 +23,14 @@ module Account
       end
     end
 
+    def courses
+      @pagy, @courses = pagy_array(
+        Xokul::UBS::Teacher.courses(@user.id_number),
+        link_extra: 'data-remote="true"',
+        items:      PAGY_ITEMS
+      )
+    end
+
     def articles
       @pagy, @articles = pagy(
         @user.articles.active.order(year: :desc),

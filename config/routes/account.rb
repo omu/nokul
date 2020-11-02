@@ -52,6 +52,7 @@ end
 resources :users, only: [] do
   scope module: :account, controller: :profile, as: 'profile' do
     get :edit
+    get :courses
     get :articles
     get :books
     get :certifications

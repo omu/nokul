@@ -35,6 +35,8 @@ en:
         professional_experiences: Professional Experiences
         avatar: Profile photo
       partials:
+        courses:
+          courses: Courses
         articles:
           articles: Articles
           create_articles_from_yoksis: Create my articles from YOKSIS

@@ -67,7 +67,8 @@
         <br>
         <nav class="scrollable">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-articles-tab" data-toggle="tab" href="#articles" role="tab" aria-controls="nav-home" aria-selected="true"><%= t('account.profile.partials.articles.articles') %></a>
+            <a class="nav-item nav-link active" id="nav-courses-tab" data-toggle="tab" href="#courses" role="tab" aria-controls="nav-home" aria-selected="true"><%= t('account.profile.partials.courses.courses') %></a>
+            <a class="nav-item nav-link" id="nav-articles-tab" data-toggle="tab" href="#articles" role="tab" aria-controls="nav-home" aria-selected="true"><%= t('account.profile.partials.articles.articles') %></a>
             <a class="nav-item nav-link" id="nav-papers-tab" data-toggle="tab" href="#papers" role="tab" aria-controls="nav-profile" aria-selected="false"><%= t('account.profile.partials.papers.papers') %></a>
             <a class="nav-item nav-link" id="nav-projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="nav-profile" aria-selected="false"><%= t('account.profile.partials.projects.projects') %></a>
             <a class="nav-item nav-link" id="nav-books-tab" data-toggle="tab" href="#books" role="tab" aria-controls="nav-contact" aria-selected="false"><%= t('account.profile.partials.books.books') %></a>
@@ -75,7 +76,10 @@
           </div>
         </nav>
         <div class="tab-content pt-2" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="articles" role="tabpanel" aria-labelledby="nav-articles-tab">
+          <div class="tab-pane fade show active" id="courses" role="tabpanel" aria-labelledby="nav-courses-tab">
+            <p class="text-center h4 text-muted"><%= t('loading') %></p>
+          </div>
+          <div class="tab-pane fade" id="articles" role="tabpanel" aria-labelledby="nav-articles-tab">
             <p class="text-center h4 text-muted"><%= t('loading') %></p>
           </div>
           <div class="tab-pane fade" id="papers" role="tabpanel" aria-labelledby="nav-papers-tab">
@@ -97,6 +101,7 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function(){
+    $.get("<%= profile_user_courses_path(@user) %>")
     $.get("<%= profile_user_articles_path(@user) %>")
     $.get("<%= profile_user_papers_path(@user) %>")
     $.get("<%= profile_user_books_path(@user) %>")

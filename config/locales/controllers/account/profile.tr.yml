@@ -35,6 +35,8 @@ tr:
         professional_experiences: Mesleki Deneyimler
         avatar: Profil fotoğrafı
       partials:
+        courses:
+          courses: Dersler
         articles:
           articles: Makaleler
           create_articles_from_yoksis: Makalelerimi YÖKSİS'ten Oluştur
