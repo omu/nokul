@@ -22,7 +22,7 @@
         <ul class="list-group">
           <% User.with_most_articles.each do |user| %>
             <li class="list-group-item">
-              <%= link_to user_path(user) do %>
+              <%= link_to user_profile_path(user) do %>
                 <%= "#{user.identities.first.try(:first_name)} #{user.identities.first.try(:last_name)}" %>
               <% end %>
               - <%= user.duties.tenure.first.try(:unit).try(:name) %>
