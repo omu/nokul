@@ -6,7 +6,7 @@
           <div class="d-flex w-100 justify-content-between">
             <h6 class="mb-1"><%= course.name %></h6>
           </div>
-          <p class="mb-1"><small><%= course.program_description %></small></p>
+          <p class="mb-1"><small><%= course.program_fullname %>, <%= course.program_description %></small></p>
           <span class="badge badge-light"><%= course.grouped ? course.course_group_code : course.code %></span>
           <span class="badge badge-primary"><%= course.year %></span>
           <span class="badge badge-success"><%= course.semester %></span>
