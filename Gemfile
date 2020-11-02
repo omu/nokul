@@ -73,7 +73,7 @@ gem 'rollbar'
 gem 'slack-notifier'
 
 # permalinks
-gem 'friendly_id', '~> 5.3.0'
+gem 'friendly_id', '~> 5.4.0'
 
 # sms
 gem 'sms', github: 'omu/sms'
