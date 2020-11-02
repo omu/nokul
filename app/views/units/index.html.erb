@@ -21,6 +21,12 @@
             </tr>
           </thead>
           <tbody>
+            <%
+              excepted_actions = [:show]
+              excepted_actions << :edit    unless policy([:unit]).edit?
+              excepted_actions << :destroy unless policy([:unit]).destroy?
+            %>
+
             <% @units.each do |unit| %>
               <tr>
                 <td><%= link_to(unit.names_depth_cache, unit_path(unit)) %></td>
@@ -28,7 +34,7 @@
                 <td><%= unit.unit_type.try(:name) %></td>
                 <td><%= unit.unit_status.try(:name) %></td>
                 <td><%= unit.unit_instruction_type.try(:name) %></td>
-                <td><%= link_to_actions(unit, except: :show) %></td>
+                <td><%= link_to_actions(unit, except: excepted_actions) %></td>
               </tr>
             <% end %>
           </tbody>

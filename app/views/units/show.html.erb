@@ -3,8 +3,13 @@
     <div class="card">
       <div class="card-header">
         <%= fa_icon 'university' %><strong><%= @unit.name %></strong>
+        <%
+          excepted_actions = [:show]
+          excepted_actions << :edit    unless policy([:unit]).edit?
+          excepted_actions << :destroy unless policy([:unit]).destroy?
+        %>
         <div class="card-header-actions">
-          <%= link_to_actions(@unit, except: :show) %>
+          <%= link_to_actions(@unit, except: excepted_actions) %>
         </div>
       </div>
       <div class="card-body">

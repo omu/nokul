@@ -4,6 +4,14 @@
   <% end %>
 </li>
 
+<% if policy([:unit]).index? %>
+  <li class="c-sidebar-nav-item">
+    <%= link_to :units, class: 'c-sidebar-nav-link' do %>
+      <%= fa_icon('sitemap', text: t('layouts.shared.menus.admin.units'), class: 'c-sidebar-nav-icon') %>
+    <% end %>
+  </li>
+<% end %>
+
 <% if policy([:meksis, :dashboard]).index? %>
   <li class="c-sidebar-nav-item">
     <%= link_to :meksis, class: 'c-sidebar-nav-link' do %>
