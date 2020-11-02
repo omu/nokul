@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-sm-12'>
-    <% unless certifications.exists? %>
+    <% if certifications.blank? && @user == current_user %>
       <div class='text-center'>
         <%= link_to fa_icon('download', text: t('.create_certifications_from_yoksis')),
                     yoksis_services_fetch_path(service: 'certifications'),

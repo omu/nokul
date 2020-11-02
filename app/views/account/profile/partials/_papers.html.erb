@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-sm-12'>
-    <% unless papers.exists? %>
+    <% if papers.blank? && @user == current_user %>
       <div class='text-center'>
         <%= link_to fa_icon('download', text: t('.create_papers_from_yoksis')),
                     yoksis_services_fetch_path(service: 'papers'),
