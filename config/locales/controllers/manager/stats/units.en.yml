@@ -1,0 +1,10 @@
+en:
+    manager:
+    stats:
+      students:
+        units:
+          faculties: Faculties
+          female: Female
+          male: Male
+          title: Number of Students by Faculties
+          total: Total

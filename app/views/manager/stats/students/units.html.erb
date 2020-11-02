@@ -1,0 +1,54 @@
+<div id="chart-for-units"></div>
+
+<script>
+// Create the chart
+Highcharts.chart('chart-for-units', {
+  chart: {
+    type: 'pie',
+    height: 600
+  },
+  title: {
+    text: "<%= t('.title') %>"
+  },
+
+  accessibility: {
+    announceNewData: {
+      enabled: true
+    },
+    point: {
+      valueSuffix: '%'
+    }
+  },
+
+  plotOptions: {
+    series: {
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}'
+      }
+    }
+  },
+
+  tooltip: {
+    headerFormat: '',
+    pointFormat: `
+      <strong>{point.name}</strong><br/>
+      <p style="color: #96d1c7; font-weight: bold;"><%= t('.male') %>: {point.number_of_students.male}<p/><br/>
+      <p style="color: #fc7978; font-weight: bold;"><%= t('.female') %>: {point.number_of_students.female}</p><br/>
+      <p style="color: #626262; font-weight: bold;"><%= t('.total') %>: {point.y}</p><br/>
+    `
+  },
+
+  series: [
+    {
+      name: "<%= t('.faculties') %>",
+      colorByPoint: true,
+      data: <%= sanitize(@series) %>,
+    }
+  ],
+  drilldown: {
+    series: <%= sanitize(@details) %>
+  }
+});
+    $('.highcharts-credits').html('')
+</script>

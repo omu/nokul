@@ -65,6 +65,25 @@ module Manager
           }
         end.to_json
       end
+
+      def units
+        data = Xokul::UBS::Statistic::Student.by_nested_units
+        @series = data.values.map do |value|
+          {
+            name: value[:name], y: value[:total], number_of_students: value[:number_of_students], drilldown: value[:name]
+          }
+        end.to_json
+
+        @details = data.values.map do |value|
+          {
+            name: value[:name],
+            id:   value[:name],
+            data: value[:children].values.map do |child|
+              { name: child[:name], y: child[:total], number_of_students: child[:number_of_students] }
+            end
+          }
+        end.to_json
+      end
     end
   end
 end

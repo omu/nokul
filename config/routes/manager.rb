@@ -16,6 +16,7 @@ namespace :manager do
       get :genders
       get :genders_and_degrees
       get :non_graduates
+      get :units
     end
   end
 end

@@ -1,0 +1,10 @@
+tr:
+  manager:
+    stats:
+      students:
+        units:
+          faculties: Fakülteler
+          female: Kadın
+          male: Erkek
+          title: Fakültere Göre Öğrenci Sayıları
+          total: Toplam

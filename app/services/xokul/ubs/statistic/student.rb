@@ -38,6 +38,10 @@ module Xokul
           )
         end
 
+        def by_nested_units
+          request("#{NAMESPACE}/nested_units?locale=#{I18n.locale}")
+        end
+
         def transform_keys(results, schema)
           results.map { |item| item.transform_keys { |key| schema.fetch(key, key) } }
         end
