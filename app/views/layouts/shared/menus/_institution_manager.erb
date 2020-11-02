@@ -3,3 +3,12 @@
     <%= fa_icon('area-chart', text: t('.manager.stats'), class: 'c-sidebar-nav-icon') %>
   <% end %>
 </li>
+
+<% if policy([:meksis, :dashboard]).index? %>
+  <li class="c-sidebar-nav-item">
+    <%= link_to :meksis, class: 'c-sidebar-nav-link' do %>
+      <%= fa_icon('th', text: t('layouts.shared.menus.admin.meksis'), class: 'c-sidebar-nav-icon') %>
+    <% end %>
+  </li>
+<% end %>
+
