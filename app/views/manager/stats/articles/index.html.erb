@@ -97,7 +97,7 @@
         <%= t('.publications_by_number_of_authors') %>
       </div>
       <div class="card-body">
-        <%= column_chart Article.active.group(:number_of_authors).count %>
+        <%= column_chart Article.active.group(:number_of_authors).having("number_of_authors <= ?", 15).count %>
       </div>
     </div>
   </div>
