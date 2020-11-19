@@ -1,7 +1,21 @@
-<div id="chart-for-maps"></div>
+<div class="row">
+  <div class="col-sm-12 col-md-9">
+    <div id="chart-for-maps"></div>
+  </div>
+  <div class="col-sm-12 col-md-3">
+    <h6>Seçilen Şehirler</h6>
+    <p class="text-muted">Çoklu seçim yapabilmek için, CTRL ile tuşuna basılı olarak seçim işlemini yapmalısınız.</p>
+    <hr>
+    <div id="selectedCities">
+      <div class="alert alert-info">
+        Seçilen şehirlere göre öğrenci sayılarına ve toplamlarına bu alandan ulaşabilirsiniz
+      </div>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript">
-  Highcharts.mapChart('chart-for-maps', {
+  chart =  Highcharts.mapChart('chart-for-maps', {
     chart: {
       map: 'countries/tr/tr-all',
       height: 600
@@ -18,12 +32,33 @@
     colorAxis: {
         min: 0
     },
+
+    plotOptions: {
+      series: {
+        point: {
+          events: {
+            select: function () {
+              drawSelectedCities(this.series.chart)
+            },
+            unselect: function () {
+              drawSelectedCities(this.series.chart)
+            }
+          }
+        }
+      }
+    },
     series: [{
       data: <%= sanitize(@series) %>,
       joinBy: 'name',
+      allowPointSelect: true,
       states: {
         hover: {
           color: '#BADA55'
+        },
+        select: {
+          color: '#EFFFEF',
+          borderColor: 'black',
+          dashStyle: 'dot'
         }
       },
       dataLabels: {
@@ -34,7 +69,7 @@
         headerFormat: '',
         pointFormat: `
           <strong>{point.name}</strong><br/>
-          <p style="color: #96d1c7; font-weight: bold;"><%= t('.male') %>: {point.male}<p/><br/>
+          <p style="color: #577b9a; font-weight: bold;"><%= t('.male') %>: {point.male}<p/><br/>
           <p style="color: #fc7978; font-weight: bold;"><%= t('.female') %>: {point.female}</p><br/>
           <p style="color: #626262; font-weight: bold;"><%= t('.total') %>: {point.value}</p><br/>
         `
@@ -43,4 +78,52 @@
   });
 
   $('.highcharts-credits').html('')
+
+  function drawSelectedCities(chart) {
+    content = `
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Şehir</th>
+            <th>Erkek</th>
+            <th>Kadın</th>
+            <th>Toplam</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${
+            chart.getSelectedPoints().sort((a, b) => a.name - b.name).map(function(item, index) {
+              return `
+                <tr>
+                  <th>${index + 1}</th>
+                  <td>${item.name}</td>
+                  <td style="color: #577b9a; font-weight: bold;">${item.male}</td>
+                  <td style="color: #fc7978; font-weight: bold;">${item.female}</td>
+                  <td>${item.value}</td>
+                </tr>
+              `
+            }).join('')
+          }
+          <tr class="table-success">
+            <th colspan="2" class="text-center">Toplam</th>
+            <th>${chart.getSelectedPoints().reduce((prev, cur) => prev + cur.male, 0)}</th>
+            <th>${chart.getSelectedPoints().reduce((prev, cur) => prev + cur.female, 0)}</th>
+            <th>${chart.getSelectedPoints().reduce((prev, cur) => prev + cur.value, 0)}</th>
+          </tr>
+        </tbody>
+      </table>
+    `
+
+    if (chart.getSelectedPoints().length == 0) {
+      content = `
+        <div class="alert alert-info">
+          Seçilen şehirlere göre öğrenci sayılarına ve toplamlarına bu alandan ulaşabilirsiniz
+        </div>
+      `
+    }
+
+    $('#selectedCities').html(content)
+  }
 </script>
+
