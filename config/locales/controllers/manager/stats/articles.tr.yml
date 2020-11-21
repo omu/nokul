@@ -11,7 +11,8 @@ tr:
           publications_by_publication_types: Yayın Türüne Göre Makaleler
           recently_added: En Son Eklenen Makaleler
           top_publishers: En Çok Makalesi Olanlar
-          number_of_articles_by_units: Birimlere Göre Makale Sayısı (Max 100)
+          units_with_the_most_articles: En Fazla Yayını Olan Birimler (İlk 200)
+          units_with_the_fewest_articles: En Ez Yayını Olan Birimler (İlk 200)
         articles:
           title: Yayın Adı
           author: Yazar

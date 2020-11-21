@@ -56,10 +56,21 @@
   <div class="col-sm-12">
     <div class="card">
       <div class='card-header'>
-        <%= t('.number_of_articles_by_units') %>
+        <%= t('.units_with_the_most_articles') %>
       </div>
       <div class="card-body">
-        <%= column_chart Article.active.joins(:units).group('units.name').count.sort_by(&:last).reverse.first(100) %>
+        <%= column_chart Article.active.joins(:units).group('units.name').count.sort_by(&:last).reverse.first(200) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.units_with_the_fewest_articles') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.joins(:units).group('units.name').count.sort_by(&:last).first(200) %>
       </div>
     </div>
   </div>

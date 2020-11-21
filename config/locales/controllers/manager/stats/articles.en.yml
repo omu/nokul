@@ -11,7 +11,8 @@ en:
           publications_by_publication_types: Publications by Publication Types
           recently_added: Recently Added Articles
           top_publishers: Top Publishing Academics
-          number_of_articles_by_units: Number of Articles by Units (Max 100)
+          units_with_the_most_articles: Units with the Most Articles (First 200)
+          units_with_the_fewest_articles: Units with the Fewest Articles (First 200)
         articles:
           title: Title
           author: Author
@@ -23,6 +24,6 @@ en:
           access_type: Access Type
           scope: Scope
           review: Reviewed/Unreviewed
-          type: Type 
+          type: Type
           index: Index
           number_of_authors: Number of Authours
