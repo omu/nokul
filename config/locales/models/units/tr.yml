@@ -60,5 +60,8 @@ tr:
       <<: *employee
       parent: Üst Birim
       academic_staff: Akademik Personel
+      publications_by_number_of_authors: Yazar Sayısına Göre Makaleler
+      publications_by_authors: Yazarlara Göre Makale Sayısı
+      academic_publishing: Akademik Yayın
     update:
       success: Birim başarıyla güncellendi.

@@ -2,7 +2,7 @@ en:
   manager:
     stats:
       articles:
-        index:
+        dashboard:
           article: Article
           number_of_articles_by_years: Number of Articles by Years
           publications_by_index_types: Publications by Index Types
@@ -11,3 +11,18 @@ en:
           publications_by_publication_types: Publications by Publication Types
           recently_added: Recently Added Articles
           top_publishers: Top Publishing Academics
+          number_of_articles_by_units: Number of Articles by Units (Max 100)
+        articles:
+          title: Title
+          author: Author
+          qualities: Qualities
+          number_of_authors: Number of Authours
+          unit: Unit
+        search:
+          smart_search_placeholder: Article Title, Author, Unit
+          access_type: Access Type
+          scope: Scope
+          review: Reviewed/Unreviewed
+          type: Type 
+          index: Index
+          number_of_authors: Number of Authours

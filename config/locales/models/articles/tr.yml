@@ -2,7 +2,7 @@ tr:
   activerecord:
     enums:
       article:
-        access_type:
+        access_types:
           electronic: Elektronik
           printed: Basılı
           printed_and_electronic: Basılı ve Elektronik

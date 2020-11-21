@@ -29,6 +29,7 @@ en:
   updated_at: Updated At
   'yes': 'Yes'
   year: Year
+  list: List
 
   cocoon:
     defaults:

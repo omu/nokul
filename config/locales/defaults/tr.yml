@@ -29,6 +29,7 @@ tr:
   updated_at: Güncellenme Tarihi
   'yes': Evet
   year: Yıl
+  list: Listele
 
   cocoon:
     defaults:

@@ -2,7 +2,7 @@ en:
   activerecord:
     enums:
       article:
-        access_type:
+        access_types:
           electronic: Electronic
           printed: Printed
           printed_and_electronic: Printed and Electronic

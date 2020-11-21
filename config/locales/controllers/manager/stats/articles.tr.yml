@@ -2,7 +2,7 @@ tr:
   manager:
     stats:
       articles:
-        index:
+        dashboard:
           article: Makale
           number_of_articles_by_years: Yıllara Göre Makale Sayısı
           publications_by_index_types: Index Türüne Göre Makaleler
@@ -11,3 +11,18 @@ tr:
           publications_by_publication_types: Yayın Türüne Göre Makaleler
           recently_added: En Son Eklenen Makaleler
           top_publishers: En Çok Makalesi Olanlar
+          number_of_articles_by_units: Birimlere Göre Makale Sayısı (Max 100)
+        articles:
+          title: Yayın Adı
+          author: Yazar
+          qualities: Nitelikleri
+          number_of_authors: Yazar Sayısı
+          unit: Birim
+        search:
+          smart_search_placeholder: Yayın Adı, Yazar, Birim
+          access_type: Erişim Türü
+          scope: Kapsam
+          review: Hakemli/Hakemsiz
+          type: Makale Türü
+          index: İndeks
+          number_of_authors: Yazar Sayısı

@@ -60,5 +60,8 @@ en:
       <<: *employee
       parent: Parent Unit
       academic_staff: Academic Staff
+      publications_by_number_of_authors: Publications by Number of Authors
+      publications_by_authors: Publications_by_authors
+      academic_publishing: Academic Publishing
     update:
       success: Unit successfully updated.
