@@ -13,6 +13,8 @@ en:
           top_publishers: Top Publishing Academics
           units_with_the_most_articles: Units with the Most Articles (First 200)
           units_with_the_fewest_articles: Units with the Fewest Articles (First 200)
+          articles_by_base_units: Number of Articles by Base Units
+          articles_by_unit_types: Number of Articles by Unit Types
         articles:
           title: Title
           author: Author

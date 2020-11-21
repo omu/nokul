@@ -70,7 +70,29 @@
         <%= t('.units_with_the_fewest_articles') %>
       </div>
       <div class="card-body">
-        <%= column_chart Article.active.joins(:units).group('units.name').count.sort_by(&:last).first(200) %>
+        <%= column_chart @number_of_articles_by_units.sort_by(&:last).first(200) %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-12">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.articles_by_base_units') %>
+      </div>
+      <div class="card-body">
+        <%= line_chart @number_of_articles_by_base_units.values.reduce(:merge).sort_by(&:last).reverse %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.articles_by_unit_types') %>
+      </div>
+      <div class="card-body">
+        <%= line_chart @number_of_articles_by_base_units.transform_values{ |units| units.values.sum }.sort_by(&:last).reverse %>
       </div>
     </div>
   </div>

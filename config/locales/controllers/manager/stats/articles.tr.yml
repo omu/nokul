@@ -13,6 +13,8 @@ tr:
           top_publishers: En Çok Makalesi Olanlar
           units_with_the_most_articles: En Fazla Yayını Olan Birimler (İlk 200)
           units_with_the_fewest_articles: En Ez Yayını Olan Birimler (İlk 200)
+          articles_by_base_units: Fakülte, MYO, YO, Enstitü, Rektörlük Seviyesinde Makale Sayısı
+          articles_by_unit_types: Birim Türüne Göre Makale Sayısı
         articles:
           title: Yayın Adı
           author: Yazar
