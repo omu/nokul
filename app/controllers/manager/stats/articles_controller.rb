@@ -5,6 +5,7 @@ module Manager
     class ArticlesController < ApplicationController
       include SearchableModule
 
+      before_action :set_article, only: %i[show]
       before_action :authorized?
 
       def index
@@ -14,6 +15,8 @@ module Manager
                           .dynamic_search(search_params(Article))
         @pagy, @articles = pagy(articles)
       end
+
+      def show; end
       
       def dashboard
         unit_types = UnitType.includes(:units)
@@ -33,6 +36,10 @@ module Manager
       end
 
       private
+
+      def set_article
+        @article = Article.find(params[:id])
+      end
 
       def authorized?
         authorize(current_user, policy_class: Manager::Stats::ArticlePolicy)

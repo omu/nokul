@@ -1,0 +1,170 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'file-text-o' %><strong class="ml-2"><%= t('.article_details') %></strong>
+      </div>
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td>Yöksis Id</td>
+              <td><%= @article.yoksis_id %></td>
+            </tr>
+            <tr>
+              <td><%= t('.title') %></td>
+              <td><%= @article.title %></td>
+            </tr>
+            <tr>
+              <td><%= t('.article_owner') %></td>
+              <td><%= link_to @article.user.identities.user_identity.full_name, user_profile_path(@article.user) %></td>
+            </tr>
+            <% duty = @article.user.duties.tenure.first %>
+            <% if duty.try(:unit).present? %>
+              <tr>
+                <td><%= t('.unit') %></td>
+                <td>
+                  <%= link_to duty.unit.name, unit_path(duty.unit) %>
+                </td>
+              </tr>
+            <% end %>
+            <tr>
+              <td><%= t('.authors') %></td>
+              <td><%= @article.authors %></td>
+            </tr>
+            <tr>
+              <td><%= t('.number_of_authors') %></td>
+              <td><%= @article.number_of_authors %></td>
+            </tr>
+            <tr>
+              <td><%= t('.index') %></td>
+              <td><%= @article.index %></td>
+            </tr>
+            <tr>
+              <td><%= t('.scope') %></td>
+              <td><%=  enum_t(@article, :scope) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.type') %></td>
+              <td><%= enum_t(@article, :type) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.review') %></td>
+              <td><%=  enum_t(@article, :review) %></td>
+            </tr>
+            <% if @article.access_type.present? %>
+              <tr>
+                <td><%= t('.access_type') %></td>
+                <td><%= enum_t(@article, :access_type) %></td>
+              </tr>
+            <% end %>
+            <% if @article.access_link.present? %>
+              <tr>
+                <td><%= t('.access_link') %></td>
+                <td><%= link_to @article.access_link, @article.access_link, target: '_blank' %></td>
+              </tr>
+            <% end %>
+            <tr>
+              <td><%= t('.discipline') %></td>
+              <td><%= @article.discipline %></td>
+            </tr>
+            <tr>
+              <td><%= t('.language_of_publication') %></td>
+              <td><%= @article.language_of_publication %></td>
+            </tr>
+            <tr>
+              <td><%= t('.journal') %></td>
+              <td><%= @article.journal %></td>
+            </tr>
+            <% if @article.country.present? %>
+              <tr>
+                <td><%= t('.country') %></td>
+                <td><%= @article.country.name %></td>
+              </tr>
+            <% end %>
+            <% if @article.city.present? %>
+              <tr>
+                <td><%= t('.city') %></td>
+                <td><%= @article.city.name %></td>
+              </tr>
+            <% end %>
+            <% if @article.year.present? %>
+              <tr>
+                <td><%= t('.year') %></td>
+                <td><%= @article.year %></td>
+              </tr>
+            <% end %>
+            <% if @article.month.present? %>
+              <tr>
+                <td><%= t('.month') %></td>
+                <td><%= @article.month %></td>
+              </tr>
+            <% end %>
+            <% if @article.volume.present? %>
+              <tr>
+                <td><%= t('.volume') %></td>
+                <td><%= @article.volume %></td>
+              </tr>
+            <% end %>
+            <% if @article.issue.present? %>
+              <tr>
+                <td><%= t('.issue') %></td>
+                <td><%= @article.issue %></td>
+              </tr>
+            <% end %>
+            <% if @article.first_page.present? %>
+              <tr>
+                <td><%= t('.first_page') %></td>
+                <td><%= @article.first_page %></td>
+              </tr>
+            <% end %>
+            <% if @article.last_page.present? %>
+              <tr>
+                <td><%= t('.last_page') %></td>
+                <td><%= @article.last_page %></td>
+              </tr>
+            <% end %>
+            <% if @article.doi.present? %>
+              <tr>
+                <td>DOI</td>
+                <td><%= @article.doi %></td>
+            </tr>
+            <% end %>
+            <tr>
+              <td>ISSN</td>
+              <td><%= @article.issn %></td>
+            </tr>
+            <% if @article.keyword.present? %>
+              <tr>
+                <td><%= t('.keyword') %></td>
+                <td><%= @article.keyword %></td>
+              </tr>
+            <% end %>
+            <% if @article.special_issue.present? %>
+              <tr>
+                <td><%= t('.special_issue') %></td>
+                <td><%= @article.special_issue %></td>
+              </tr>
+            <% end %>
+            <% if @article.sponsored_by.present? %>
+              <tr>
+                <td><%= t('.sponsored_by') %></td>
+                <td><%= @article.sponsored_by %></td>
+              </tr>
+            <% end %>
+            <% if @article.incentive_point.present? %>
+              <tr>
+                <td><%= t('.incentive_point') %></td>
+                <td><%= @article.incentive_point %></td>
+              </tr>
+            <% end %>
+            <tr>
+              <td><%= t('.last_update') %></td>
+              <td><%= as_date_and_time(@article.last_update) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

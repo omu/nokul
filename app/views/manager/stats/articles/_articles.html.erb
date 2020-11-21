@@ -13,7 +13,7 @@
     <% articles.each do |article| %>
         <% user = article.user %>
         <tr>
-        <td><%= article.title %></td>
+        <td><%= link_to article.title, manager_articles_path(article) %></td>
         <td><%= link_to user.identities.user_identity.full_name, user_profile_path(user) %></td>
         <% duty = user.duties.tenure.first %>
         <td>

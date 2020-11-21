@@ -29,3 +29,34 @@ en:
           type: Type
           index: Index
           number_of_authors: Number of Authours
+        show:
+          article_details: Article Details
+          scope: Scope
+          index: Index
+          title: Article Name
+          authors: Authors
+          article_owner: Article Owner
+          number_of_authors: Number of Authors
+          country: Country
+          city: City
+          journal: Journal
+          language_of_publication: Language of Publication
+          year: Year
+          month: Month
+          volume: Volume
+          issue: Issue
+          first_page: First Page
+          last_page: Last Page
+          access_type: Access Type
+          access_link: Access Link
+          discipline: Discipline
+          keyword: Keyword
+          special_issue: Special Issue
+          sponsored_by: Sponsored by
+          last_update: Last Update
+          type: Article Type
+          incentive_point: Incentive Point
+          review: Reviewed/Unreviewed
+          unit: Unit
+        index:
+          academic_publications: Academic Publications

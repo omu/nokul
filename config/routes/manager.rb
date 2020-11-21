@@ -4,9 +4,10 @@ namespace :manager do
   get :stats, to: 'dashboard#stats'
 
   scope module: :stats do
-    namespace :articles do
-      get :dashboard
-      get :index
+    scope '/articles', as: 'articles' do
+      get :dashboard, to: 'articles#dashboard'
+      get :index, to: 'articles#index'
+      get '/:id', to: 'articles#show'
     end
     namespace :employees do
       get '/', action: :index

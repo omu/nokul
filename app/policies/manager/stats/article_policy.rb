@@ -8,6 +8,10 @@ module Manager
         dashboard?
       end
 
+      def show?
+        dashboard?
+      end
+
       def dashboard?
         user.role?(:admin) || manager?
       end

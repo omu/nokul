@@ -29,3 +29,34 @@ tr:
           type: Makale Türü
           index: İndeks
           number_of_authors: Yazar Sayısı
+        show:
+          article_details: Makale Detayı
+          scope: Kapsam
+          index: İndeks
+          title: Makale Adı
+          authors: Yazarlar
+          article_owner: Makale Sahibi
+          number_of_authors: Yazar Sayısı
+          country: Ülke
+          city: Şehir
+          journal: Dergi
+          language_of_publication: Yayın Dili
+          year: Yıl
+          month: Ay
+          volume: Cilt
+          issue: Sayı
+          first_page: İlk Sayfa
+          last_page: Son Sayfa
+          access_type: Erişim Türü
+          access_link: Erişim Bağlantısı
+          discipline: Alan Bilgisi
+          keyword: Anahtar Kelime
+          special_issue: Özel Sayı
+          sponsored_by: Sponsor
+          last_update: Güncelleme Tarihi
+          type: Makale Türü
+          incentive_point: Teşvik Puanı
+          review: Hakemli/Hakemsiz
+          unit: Birim
+        index:
+          academic_publications: Akademik  Yayınlar

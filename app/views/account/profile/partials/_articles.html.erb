@@ -12,9 +12,9 @@
       </div>
       <div class="list-group">
         <% articles.each do |article| %>
-          <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
-              <h6 class="mb-1"><%= article.title %></h6>
+              <h6 class="mb-1"><%= link_to article.title, manager_articles_path(article) %></h6>
             </div>
             <p class="mb-1"><small><%= article.authors %>, <%= article.journal %></small></p>
             <span class="badge badge-light"><%= enum_t(article, :access_type) %></span>
@@ -22,7 +22,7 @@
             <span class="badge badge-primary"><%= enum_t(article, :review) %></span>
             <span class="badge badge-success"><%= article.index %></span>
             <span class="badge badge-secondary"><%= enum_t(article, :type) %></span>
-          </a>
+          </div>
         <% end %>
       </div>
     <% end %>
