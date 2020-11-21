@@ -16,7 +16,7 @@
         <%= t('.publications_by_index_types') %>
       </div>
       <div class="card-body">
-        <%= column_chart Article.active.group(:index).count %>
+        <%= line_chart Article.active.group(:index).count.sort_by(&:last).reverse %>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
         <%= t('.publications_by_publication_types') %>
       </div>
       <div class="card-body">
-        <%= column_chart Article.active.group(:type).count %>
+        <%= line_chart Article.active.group(:type).count.sort_by(&:last).reverse %>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@
         <%= t('.units_with_the_most_articles') %>
       </div>
       <div class="card-body">
-        <%= column_chart Article.active.joins(:units).group('units.name').count.sort_by(&:last).reverse.first(200) %>
+        <%= column_chart @number_of_articles_by_units.sort_by(&:last).reverse.first(200) %>
       </div>
     </div>
   </div>
