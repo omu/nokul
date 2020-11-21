@@ -3,7 +3,12 @@
 module Manager
   module Stats
     class ArticlePolicy < ApplicationPolicy
+
       def index?
+        dashboard?
+      end
+
+      def dashboard?
         user.role?(:admin) || manager?
       end
 

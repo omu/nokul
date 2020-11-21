@@ -3,6 +3,20 @@
 class Article < ApplicationRecord
   self.inheritance_column = nil
 
+  # search
+  include DynamicSearch
+  include PgSearch::Model
+
+  # dynamic_search
+  search_keys :year, :access_type, :scope, :review, :type, :index, :number_of_authors
+
+  pg_search_scope(
+    :search,
+    against: %i[title],
+    associated_against: { user_identities: %i[first_name last_name], units: %i[names_depth_cache] },
+    using:   { tsearch: { prefix: true } }
+  )
+
   # enums
   enum scope: { national: 0, international: 1 }
   enum review: { reviewed: 0, unreviewed: 1 }
@@ -54,6 +68,9 @@ class Article < ApplicationRecord
 
   # relations
   belongs_to :user, counter_cache: true
+  has_many :user_identities, through: :user, source: :identities
+  has_many :duties, through: :user, source: :duties
+  has_many :units, through: :duties, source: :unit
 
   # validations
   validates :yoksis_id, uniqueness: { scope: %i[user_id status] }, numericality: { only_integer: true, greater_than: 0 }

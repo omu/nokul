@@ -30,7 +30,7 @@
               data-action="click->manager-dashboard#load"
               data-content-url="<%= manager_employees_path %>"
               class="btn btn-outline-info btn-pill btn-sm float-right mt-2"><%= fa_icon('info-circle', text: t('.more_information')) %></a>
-            <%= link_to 'Listele', employees_users_path, class: 'btn btn-outline-info btn-pill btn-sm float-right mt-2 mr-1' %>
+            <%= link_to t('list'), employees_users_path, class: 'btn btn-outline-info btn-pill btn-sm float-right mt-2 mr-1' %>
           </div>
         </div>
       </div>
@@ -40,14 +40,15 @@
         <div class="card-header bg-warning text-white"><%= fa_icon 'book' %></div>
         <div class="card-body">
           <div>
-            <div class="text-value"><%= Article.count %></div>
+            <div class="text-value"><%= Article.active.count %></div>
             <div class="text-uppercase text-muted small font-weight-bold"><%= t('.academic_publishing') %></div>
           </div>
           <div>
             <a href="#"
               data-action="click->manager-dashboard#load"
-              data-content-url="<%= manager_articles_path %>"
+              data-content-url="<%= manager_articles_dashboard_path %>"
               class="btn btn-outline-warning btn-pill btn-sm float-right mt-2"><%= fa_icon('info-circle', text: t('.more_information')) %></a>
+            <%= link_to t('list'), manager_articles_index_path, class: 'btn btn-outline-info btn-pill btn-sm float-right mt-2 mr-1' %>
           </div>
         </div>
       </div>

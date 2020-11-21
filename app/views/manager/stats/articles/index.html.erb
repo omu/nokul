@@ -1,104 +1,19 @@
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body p-3 d-flex align-items-center">
-        <i class="fa fa-cogs bg-primary p-3 font-2xl mr-3"></i>
-        <div>
-          <div class="text-value-sm text-primary"><%= Article.unique_count %></div>
-          <div class="text-muted text-uppercase font-weight-bold small"><%= t('.article') %></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-header">
-        <i class="fa fa-align-justify"></i> <%= t('.top_publishers') %>
-      </div>
-      <div class="card-body">
-        <ul class="list-group">
-          <% User.with_most_articles.each do |user| %>
-            <li class="list-group-item">
-              <%= link_to user_profile_path(user) do %>
-                <%= "#{user.identities.first.try(:first_name)} #{user.identities.first.try(:last_name)}" %>
-              <% end %>
-              - <%= user.duties.tenure.first.try(:unit).try(:name) %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-header">
-        <i class="fa fa-align-justify"></i> <%= t('.recently_added') %>
-      </div>
-      <div class="card-body">
-        <ul class="list-group">
-          <% Article.most_recent.each do |article| %>
-            <small><li class="list-group-item"><%= article_citation(article) %></li></small>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-12">
-    <div class="card">
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
       <div class='card-header'>
-        <%= t('.number_of_articles_by_years') %>
+        <%= fa_icon 'align-justify', text: 'Akademik Yayınlar' %>
       </div>
-      <div class="card-body">
-        <%= line_chart Article.active.order(year: :asc).group(:year).count %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class='card-header'>
-        <%= t('.publications_by_index_types') %>
-      </div>
-      <div class="card-body">
-        <%= column_chart Article.active.group(:index).count %>
+      <div class='card-body'>
+        <%= render 'search' %>
+        <%= render 'articles', articles: @articles %>
       </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class='card-header'>
-        <%= t('.publications_by_publication_types') %>
-      </div>
-      <div class="card-body">
-        <%= column_chart Article.active.group(:type).count %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class='card-header'>
-        <%= t('.publications_by_language') %>
-      </div>
-      <div class="card-body">
-        <%= pie_chart Article.active.group(:language_of_publication).count %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class='card-header'>
-        <%= t('.publications_by_number_of_authors') %>
-      </div>
-      <div class="card-body">
-        <%= column_chart Article.active.group(:number_of_authors).having("number_of_authors <= ?", 15).count %>
-      </div>
-    </div>
+    <nav aria-label='pagination'>
+      <%== pagy_info(@pagy) %>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
   </div>
 </div>

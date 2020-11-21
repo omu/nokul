@@ -1,0 +1,36 @@
+<table class='table table-responsive-sm'>
+    <thead>
+    <tr>
+        <th><%= t('.title') %></th>
+        <th><%= t('.author') %></th>
+        <th><%= t('.unit') %></th>
+        <th><%= t('year') %></th>
+        <th><%= t('.qualities') %></th>
+        <th><%= t('.number_of_authors') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% articles.each do |article| %>
+        <% user = article.user %>
+        <tr>
+        <td><%= article.title %></td>
+        <td><%= link_to user.identities.user_identity.full_name, user_profile_path(user) %></td>
+        <% duty = user.duties.tenure.first %>
+        <td>
+            <% if duty.try(:unit).present? %>
+            <%= link_to duty.unit.name, unit_path(duty.unit) %>
+            <% end %>
+        </td>
+        <td><%= article.year %></td>
+        <td>
+            <span class="badge badge-light"><%= enum_t(article, :access_type) %></span>
+            <span class="badge badge-info"><%= enum_t(article, :scope) %></span>
+            <span class="badge badge-primary"><%= enum_t(article, :review) %></span>
+            <span class="badge badge-success"><%= article.index %></span>
+            <span class="badge badge-secondary"><%= enum_t(article, :type) %></span>
+        </td>
+        <td><%= article.number_of_authors %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

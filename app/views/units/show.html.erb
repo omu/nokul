@@ -125,6 +125,48 @@
     </div>
   </div>
 </div>
+
+<% articles = Article.active
+                     .joins(:user)
+                     .where(users: {id: employees.pluck(:user_id)})
+                     .includes(:user) %>
+
+<div class='row'>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_authors') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart articles.group(:user).count.transform_keys{ |user| user.identities.user_identity.full_name }.sort_by(&:last).reverse %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_number_of_authors') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart articles.group(:number_of_authors).count %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.academic_publishing') %>
+      </div>
+      <div class='card-body'>
+        <%= render '/manager/stats/articles/articles', articles: articles.order("users.id ASC, year DESC NULLS LAST") %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% %w[ancestors descendants siblings].each do |action| %>
   <div class='row'>
     <div class='col-lg-12'>

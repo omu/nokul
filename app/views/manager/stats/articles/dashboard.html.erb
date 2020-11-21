@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.number_of_articles_by_years') %>
+      </div>
+      <div class="card-body">
+        <%= line_chart Article.active.order(year: :asc).group(:year).count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_index_types') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.group(:index).count %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_publication_types') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.group(:type).count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_language') %>
+      </div>
+      <div class="card-body">
+        <%= pie_chart Article.active.group(:language_of_publication).count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_number_of_authors') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.group(:number_of_authors).having("number_of_authors <= ?", 15).count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.number_of_articles_by_units') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.joins(:units).group('units.name').count.sort_by(&:last).reverse.first(100) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.top_publishers') %>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% User.with_most_articles.each do |user| %>
+            <li class="list-group-item">
+              <%= link_to user_profile_path(user) do %>
+                <%= "#{user.identities.first.try(:first_name)} #{user.identities.first.try(:last_name)}" %>
+              <% end %>
+              - <%= user.duties.tenure.first.try(:unit).try(:name) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.recently_added') %>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% Article.most_recent.each do |article| %>
+            <small><li class="list-group-item"><%= article_citation(article) %></li></small>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
