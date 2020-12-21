@@ -23,7 +23,7 @@ gem 'ancestry', '>= 3.0.7'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
-gem 'image_processing', '~> 1.12.0'
+gem 'image_processing', '~> 1.12.1'
 gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
