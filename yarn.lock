@@ -847,28 +847,29 @@
     chart.js "^2.8.0"
 
 "@coreui/coreui-free-bootstrap-admin-template@https://github.com/coreui/coreui-free-bootstrap-admin-template.git#master":
-  version "3.2.0"
-  resolved "https://github.com/coreui/coreui-free-bootstrap-admin-template.git#35c446880c1c2a36d89a938f183c191d679d2c7f"
+  version "3.4.0"
+  uid c3bcf146cbcccea68ee2d79329da1772ec97cbb0
+  resolved "https://github.com/coreui/coreui-free-bootstrap-admin-template.git#c3bcf146cbcccea68ee2d79329da1772ec97cbb0"
   dependencies:
     "@coreui/chartjs" "^2.0.0"
-    "@coreui/coreui" "^3.2.0"
-    "@coreui/icons" "^1.0.1"
-    "@coreui/utils" "^1.2.4"
-    "@popperjs/core" "^2.4.0"
-    chart.js "^2.9.3"
+    "@coreui/coreui" "^3.4.0"
+    "@coreui/icons" "^2.0.0-beta.3"
+    "@coreui/utils" "^1.3.1"
+    "@popperjs/core" "^2.5.4"
+    chart.js "^2.9.4"
     perfect-scrollbar "1.5.0"
 
-"@coreui/coreui@^3.0.0-beta.1", "@coreui/coreui@^3.2.0":
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-3.2.2.tgz#78e392175373779f6c2d613d85a70eb03beaa149"
-  integrity sha512-LvQPLTigUeqOsZFmzXSl2Uz3Wx4Y0nvm3MJTVOEoyKl3tGhkBbe7P41He7277jxz3PyoiSX5vbRj8+WMHQIJTg==
+"@coreui/coreui@^3.0.0-beta.1", "@coreui/coreui@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-3.4.0.tgz#3e3627a1f48a00f6289204a23f71eaa6ea94e370"
+  integrity sha512-WqzockdWVkXUNmNwlqdu+AxM+9JoiWGe4rKaySu/dZme1NvVOn2ukjJlpTkssal8UKcSHyitzNixtkMCmUxE1A==
 
-"@coreui/icons@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@coreui/icons/-/icons-1.0.1.tgz#8af0fe6450904ee1dbb0abf36bf107f35cfecf5e"
-  integrity sha512-DAlvdHRC+HHecdy52vskbNzNKEpu6wHDvSlsHGrwOqNxQl1YLhGEtqAW4sKpyVE3GgysNCywUWZGFlLp8I3LgA==
+"@coreui/icons@^2.0.0-beta.3":
+  version "2.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@coreui/icons/-/icons-2.0.0-rc.0.tgz#b61a503f2a98ea37054be4ab5157ac1aab77d128"
+  integrity sha512-Bg+uQKzEhERRZk1qo8tcR3bjJQDzv6+uDjt5IpjFwqnnnHE4gZE6adZ7jyMYQjgIlelEaS8ZOlE1M7aKHDWZSA==
 
-"@coreui/utils@^1.2.4":
+"@coreui/utils@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@coreui/utils/-/utils-1.3.1.tgz#ebe6fa00ae7f46d166b26f116e74d55dfc89f5e0"
   integrity sha512-WuWHX7bg89cJH34TWVsLe9RsxzBhTApj+X2Ja19xhjcpxt5Gv11Ozm+fwYt6DD7DgncTvpwYrMcnNlpp701UOg==
@@ -901,10 +902,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@popperjs/core@^2.4.0":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
-  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
+"@popperjs/core@^2.5.4":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
+  integrity sha512-cPqjjzuFWNK3BSKLm0abspP0sp/IGOli4p5I5fKFAzdS8fvjdOwDCfZqAaIiXd9lPkOWi3SUUfZof3hEb7J/uw==
 
 "@rails/actioncable@^6.0.3":
   version "6.0.3"
@@ -1976,10 +1977,10 @@ chalk@^4.0.0, chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chart.js@^2.8.0, chart.js@^2.9.3:
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.3.tgz#ae3884114dafd381bc600f5b35a189138aac1ef7"
-  integrity sha512-+2jlOobSk52c1VU6fzkh3UwqHMdSlgH1xFv9FKMqHiNCpXsGPQa/+81AFa+i3jZ253Mq9aAycPwDjnn1XbRNNw==
+chart.js@^2.8.0, chart.js@^2.9.4:
+  version "2.9.4"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.4.tgz#0827f9563faffb2dc5c06562f8eb10337d5b9684"
+  integrity sha512-B07aAzxcrikjAPyV+01j7BmOpxtQETxTSlQ26BEYJ+3iUkbNKaOJ/nDbT6JjyqYxseM0ON12COHYdU2cTIjC7A==
   dependencies:
     chartjs-color "^2.1.0"
     moment "^2.10.2"
