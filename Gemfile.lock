@@ -377,7 +377,7 @@ GEM
       ffi (~> 1.0)
     recaptcha (5.6.0)
       json
-    redis (4.2.2)
+    redis (4.2.5)
     regexp_parser (1.8.2)
     rein (5.1.0)
       activerecord (>= 4.0.0)
