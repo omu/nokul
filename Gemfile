@@ -104,7 +104,7 @@ group :test do
   gem 'capybara'
   gem 'minitest-focus'
   gem 'simplecov-cobertura'
-  gem 'webdrivers', '~> 4.4'
+  gem 'webdrivers', '~> 4.6'
   gem 'webmock'
 end
 
