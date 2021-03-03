@@ -28,7 +28,7 @@ gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
 gem 'authy'
-gem 'devise', '>= 4.7.1'
+gem 'devise', '>= 4.7.3'
 gem 'omniauth_openid_connect', '>= 0.3.3'
 
 # authorization
@@ -42,17 +42,17 @@ gem 'net-ldap'
 gem 'sassc', '~> 2.4.0'
 gem 'sassc-rails', '>= 2.1.2'
 
-gem 'coffee-rails'
+gem 'coffee-rails', '>= 5.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', github: 'rails/webpacker'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick', '>= 3.4.0'
 gem 'cocoon'
-gem 'font-awesome-rails', '>= 4.7.0.5'
+gem 'font-awesome-rails', '>= 4.7.0.6'
 gem 'groupdate', '>= 5.0.0'
 gem 'pagy'
-gem 'simple_form', '>= 5.0.2'
+gem 'simple_form', '>= 5.0.3'
 gem 'wicked_pdf', '>= 2.0.2'
 
 # api
@@ -90,7 +90,7 @@ group :development, :test do
   gem 'bullet', github: 'flyerhzm/bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails', '>= 2.7.5'
+  gem 'dotenv-rails', '>= 2.7.6'
   gem 'erb_lint', require: false
   gem 'lol_dba', '>= 2.2.0'
   gem 'rubocop'
