@@ -91,12 +91,12 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails', '>= 2.7.5'
-  gem 'erb_lint', require: false
+  gem 'erb_lint', '>= 0.0.35', require: false
   gem 'lol_dba', '>= 2.2.0'
-  gem 'rubocop'
-  gem 'rubocop-minitest'
-  gem 'rubocop-performance'
-  gem 'rubocop-rails', '>= 2.5.2'
+  gem 'rubocop', '>= 0.89.0'
+  gem 'rubocop-minitest', '>= 0.10.1'
+  gem 'rubocop-performance', '>= 1.8.1'
+  gem 'rubocop-rails', '>= 2.8.1'
   gem 'simplecov', require: false
 end
 
