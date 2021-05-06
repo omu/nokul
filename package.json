@@ -11,7 +11,7 @@
     "chalk": "^4.1.0",
     "echarts": "^4.8.0",
     "flatpickr": "^4.6.8",
-    "highcharts": "^8.1.2",
+    "highcharts": "^9.0.0",
     "intl-tel-input": "^17.0.3",
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.13",
