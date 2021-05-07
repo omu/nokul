@@ -848,7 +848,6 @@
 
 "@coreui/coreui-free-bootstrap-admin-template@https://github.com/coreui/coreui-free-bootstrap-admin-template.git#master":
   version "3.4.0"
-  uid c3bcf146cbcccea68ee2d79329da1772ec97cbb0
   resolved "https://github.com/coreui/coreui-free-bootstrap-admin-template.git#c3bcf146cbcccea68ee2d79329da1772ec97cbb0"
   dependencies:
     "@coreui/chartjs" "^2.0.0"
@@ -3944,10 +3943,10 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
-highcharts@^8.1.2:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-8.2.0.tgz#3d4893015caf1a7c9ed85284d983911e844649f3"
-  integrity sha512-s3R7UEaMWUDJNxFfdjuiOtI8rnSvhEZUNN4TA7LiDRc9Tw7DUKvTv5WXSTYzxojokLbybwwlf9t3jg/meAUTnQ==
+highcharts@^9.0.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-9.1.0.tgz#2cdb38e2e03530b4fde022bb05fbce5b34651e39"
+  integrity sha512-K7HUuKhEylZ1pMdzGR35kPgUmpp0MDNpaWhEMkGiC5Jfzg/endtTLHJN2lsFqEO+xoN7AykBK98XaJPEpsrLyA==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
