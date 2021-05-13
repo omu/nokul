@@ -7,7 +7,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # core
 gem 'bootsnap', require: false
-gem 'puma'
+gem 'puma', '>= 5.3.1'
 gem 'rails', github: 'rails/rails'
 gem 'redis', '~> 4.2'
 gem 'sidekiq'
