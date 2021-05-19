@@ -28,7 +28,7 @@ gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
 gem 'authy'
-gem 'devise', '>= 4.7.1'
+gem 'devise', '>= 4.7.3'
 gem 'omniauth_openid_connect', '>= 0.3.3'
 
 # authorization
@@ -42,17 +42,17 @@ gem 'net-ldap'
 gem 'sassc', '~> 2.4.0'
 gem 'sassc-rails', '>= 2.1.2'
 
-gem 'coffee-rails'
+gem 'coffee-rails', '>= 5.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', github: 'rails/webpacker'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick', '>= 3.4.0'
 gem 'cocoon'
-gem 'font-awesome-rails', '>= 4.7.0.5'
+gem 'font-awesome-rails', '>= 4.7.0.6'
 gem 'groupdate', '>= 5.0.0'
 gem 'pagy'
-gem 'simple_form', '>= 5.0.2'
+gem 'simple_form', '>= 5.0.3'
 gem 'wicked_pdf', '>= 2.0.2'
 
 # api
@@ -77,7 +77,7 @@ gem 'friendly_id', '~> 5.4.0'
 
 # sms
 gem 'sms', github: 'omu/sms'
-gem 'twilio-ruby'
+gem 'twilio-ruby', '>= 5.41.0'
 
 # log
 gem 'lograge', '>= 0.11.2'
@@ -90,8 +90,8 @@ group :development, :test do
   gem 'bullet', github: 'flyerhzm/bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails', '>= 2.7.5'
-  gem 'erb_lint', require: false
+  gem 'dotenv-rails', '>= 2.7.6'
+  gem 'erb_lint', '>= 0.0.35', require: false
   gem 'lol_dba', '>= 2.2.0'
   gem 'rubocop'
   gem 'rubocop-minitest'
@@ -101,10 +101,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '>= 3.34.0'
   gem 'minitest-focus'
   gem 'simplecov-cobertura'
-  gem 'webdrivers', '~> 4.4'
+  gem 'webdrivers', '~> 4.4', '>= 4.4.1'
   gem 'webmock'
 end
 
