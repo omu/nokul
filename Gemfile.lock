@@ -297,7 +297,9 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mimemagic (0.3.5)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_magick (4.11.0)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -377,7 +379,7 @@ GEM
       ffi (~> 1.0)
     recaptcha (5.6.0)
       json
-    redis (4.2.2)
+    redis (4.3.1)
     regexp_parser (1.8.2)
     rein (5.1.0)
       activerecord (>= 4.0.0)
@@ -554,7 +556,7 @@ DEPENDENCIES
   rack-mini-profiler
   rails!
   recaptcha
-  redis (~> 4.2)
+  redis (~> 4.3)
   rein (>= 5.1.0)
   rollbar
   rubocop
