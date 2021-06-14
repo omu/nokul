@@ -9,7 +9,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'bootsnap', require: false
 gem 'puma'
 gem 'rails', github: 'rails/rails'
-gem 'redis', '~> 4.2'
+gem 'redis', '~> 4.3'
 gem 'sidekiq'
 
 # database
